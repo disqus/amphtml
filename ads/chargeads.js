@@ -14,36 +14,14 @@
  * limitations under the License.
  */
 
-export class AmpCarouscroll extends BaseCarousel {
-  /** @override */
-  isLayoutSupported(layout) {
-    return layout == Layout.FIXED || layout == Layout.FIXED_HEIGHT;
-  }
-  /** @override */
-  buildCarousel() {
-  }
+import {writeScript, validateSrcPrefix} from '../3p/3p';
 
-  /** @override */
-  layoutCallback() {
-    return Promise.resolve();
-  }
-
-  /** @override */
-  viewportCallback(inViewport) {
-    if (inViewport) {
-      this.hintControls();
-    }
-  }
-
-  /** @override */
-  setupGestures() {
-  }
-
-  /** @override */
-  hasPrev() {
-  }
-
-  /** @override */
-  hasNext() {
-  }
+/**
+ * @param {!Window} global
+ * @param {!Object} data
+ */
+export function chargeads(global, data) {
+  const src = data.src;
+  validateSrcPrefix('https://www.chargeplatform.com/', src);
+  writeScript(global, src);
 }
