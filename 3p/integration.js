@@ -47,7 +47,7 @@ import {mediaimpact} from '../ads/mediaimpact';
 import {nonSensitiveDataPostMessage, listenParent} from './messaging';
 import {twitter} from './twitter';
 import {yieldmo} from '../ads/yieldmo';
-import {computeInMasterFrame, nextTick, register, run} from '../src/3p';
+import {computeInMasterFrame, nextTick, register, run} from './3p';
 import {parseUrl, getSourceUrl} from '../src/url';
 import {appnexus} from '../ads/appnexus';
 import {taboola} from '../ads/taboola';
@@ -71,6 +71,7 @@ import {adstir} from '../ads/adstir';
 import {colombia} from '../ads/colombia';
 import {sharethrough} from '../ads/sharethrough';
 import {eplanning} from '../ads/eplanning';
+import {microad} from '../ads/microad';
 
 
 /**
@@ -129,6 +130,8 @@ register('adstir', adstir);
 register('colombia', colombia);
 register('sharethrough', sharethrough);
 register('eplanning', eplanning);
+register('microad', microad);
+
 
 // For backward compat, we always allow these types without the iframe
 // opting in.

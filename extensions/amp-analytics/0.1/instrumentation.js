@@ -15,7 +15,7 @@
  */
 
 import {isExperimentOn} from '../../../src/experiments';
-import {isVisibilitySpecValid} from '../../../src/service/visibility-impl';
+import {isVisibilitySpecValid} from './visibility-impl';
 import {Observable} from '../../../src/observable';
 import {getService} from '../../../src/service';
 import {timer} from '../../../src/timer';
@@ -232,7 +232,7 @@ export class InstrumentationService {
     }
   }
 
-  /** @private{function()} function to run or schedule. */
+  /** @private {function()} fn function to run or schedule. */
   runOrSchedule_(fn) {
     if (this.viewer_.isVisible()) {
       fn();
